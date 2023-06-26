@@ -1,0 +1,29 @@
+//내가 막힌 것//
+
+//1
+//p.229
+character = {
+    "name" : "기사",
+    "level" : 12,
+    "items" : {
+        "sword" : "불꽃의 검",
+        "armor" : "풀플레이트",
+    },
+    "skill" : ["베기" , "세게 베기" , "아주 세게 베기"]
+}
+
+for a in character : 
+    if type(character[a]) is dict :
+        for c in character[a] : 
+            print(c, ":", character[a][c])
+   
+    elif type(character[a]) is list : 
+        for b in character[a] :
+            print("skill : ", b)
+   
+    else :
+        print(a, ":", character[a])
+// 막힌 이유: for b in character[a]에서 print(b)를 했어야 했는데, b 가 아니라 character[a][b]를 했다. list 에서 b는 그냥 list 요소라는 것을 까먹지 말자!
+
+//2
+
