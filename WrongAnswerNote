@@ -42,3 +42,21 @@ print(len(dic_a))
 print(dic_a)     
 // 막힌 이유 : 숫자의 종류를 구해야 하는데, dictionary에 len()을 사용할 생각을 못했다.
 
+//3
+//p.270
+list_a = [1, 2, [3, 4], 5, [6, 7], [8, 9]]
+a = 0
+
+for i in list_a : 
+    if type(i) is list : 
+        b = 0
+        for j in i : 
+            list_a.insert(a + b, j)
+            b += 1
+        del list_a[a + b + 1]
+
+    a += 1
+
+print(list_a)
+//막힌 이유 : 위의 코드는 오류 나는 코드이다. 안되는 이유는 리스트 크기가 동적으로 변하기 때문에 예기치 않는 Index Error가 뜬다고 한다. 정확한 이유는 모른다.
+// 해결책으로는 list를 두개 사용하는 방법을 사용했는데 위의 코드가 정확히 안되는 이유를 모르니 답답할 따름이다.
