@@ -26,4 +26,19 @@ for a in character :
 // 막힌 이유: for b in character[a]에서 print(b)를 했어야 했는데, b 가 아니라 character[a][b]를 했다. list 에서 b는 그냥 list 요소라는 것을 까먹지 말자!
 
 //2
+//p.268
+list_a = [1,2,3,4,1,2,3,1,4,1,2,3]
+dic_a = {}
+
+for i in list_a :
+
+    if dic_a.get(i) == None : 
+        dic_a[i] = 1
+
+    else: 
+        dic_a[i] += 1
+
+print(len(dic_a))
+print(dic_a)     
+// 막힌 이유 : 숫자의 종류를 구해야 하는데, dictionary에 len()을 사용할 생각을 못했다.
 
